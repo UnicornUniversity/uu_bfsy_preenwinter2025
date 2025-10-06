@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import MyComponent from "./my-component";
 
 function App() {
+  const shoppingListItems = [
+    { amount: "1", name: "bread", purchased: true },
+    { amount: "2 l", name: "milk", purchased: false },
+    { amount: "250 g", name: "butter", purchased: true },
+    { amount: "6", name: "apples", purchased: false },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {shoppingListItems.map((item, index) => (
+        <MyComponent item={item} index={index} />
+      ))}
     </div>
   );
 }
