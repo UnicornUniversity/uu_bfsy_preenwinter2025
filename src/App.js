@@ -1,12 +1,15 @@
 import "./App.css";
-import Detail from "./detail";
+import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./UserProvider";
+import Router from "./Router";
 
 function App() {
   return (
     <div className="App">
       <UserProvider>
-        <Detail />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </UserProvider>
     </div>
   );

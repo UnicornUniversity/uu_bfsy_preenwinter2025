@@ -7,7 +7,7 @@ function ShoppingListProvider({ children }) {
     id: "697859",
     name: "Shopping List 1",
     owner: "u1",
-    memberList: ["u2"],
+    memberList: ["u2", "u3", "u4"],
     itemList: [
       { amount: "1", name: "bread", purchased: true },
       { amount: "2 l", name: "milk", purchased: false },
