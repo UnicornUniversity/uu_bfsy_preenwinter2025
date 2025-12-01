@@ -1,0 +1,71 @@
+[
+  {
+    "id": "697859",
+    "name": "Weekly Groceries",
+    "owner": "1",
+    "memberList": ["2", "3", "4"],
+    "itemList": [
+      { "amount": "1", "name": "bread", "purchased": true },
+      { "amount": "2 l", "name": "milk", "purchased": false },
+      { "amount": "250 g", "name": "butter", "purchased": true },
+      { "amount": "6", "name": "apples", "purchased": false }
+    ],
+    "archived": false
+  },
+  {
+    "id": "697860",
+    "name": "Party Supplies",
+    "owner": "1",
+    "memberList": ["2", "5"],
+    "itemList": [
+      { "amount": "2", "name": "chips", "purchased": false },
+      { "amount": "1", "name": "soda", "purchased": true },
+      { "amount": "500 g", "name": "cheese", "purchased": false },
+      { "amount": "1", "name": "crackers", "purchased": false },
+      { "amount": "1 bottle", "name": "wine", "purchased": true }
+    ],
+    "archived": false
+  },
+  {
+    "id": "697861",
+    "name": "Home Essentials",
+    "owner": "2",
+    "memberList": ["1", "3"],
+    "itemList": [
+      { "amount": "1", "name": "toilet paper", "purchased": true },
+      { "amount": "2", "name": "soap", "purchased": true },
+      { "amount": "1", "name": "detergent", "purchased": false },
+      { "amount": "1", "name": "sponges", "purchased": false }
+    ],
+    "archived": false
+  },
+  {
+    "id": "697862",
+    "name": "Breakfast Items",
+    "owner": "3",
+    "memberList": ["1", "2", "4"],
+    "itemList": [
+      { "amount": "1 box", "name": "cereal", "purchased": false },
+      { "amount": "500 ml", "name": "orange juice", "purchased": true },
+      { "amount": "12", "name": "eggs", "purchased": false },
+      { "amount": "1", "name": "yogurt", "purchased": true },
+      { "amount": "1 jar", "name": "jam", "purchased": false }
+    ],
+    "archived": false
+  },
+  {
+    "id": "697863",
+    "name": "Dinner Ingredients",
+    "owner": "1",
+    "memberList": ["2"],
+    "itemList": [
+      { "amount": "500 g", "name": "pasta", "purchased": true },
+      { "amount": "400 g", "name": "tomato sauce", "purchased": true },
+      { "amount": "300 g", "name": "ground beef", "purchased": false },
+      { "amount": "1", "name": "onion", "purchased": false },
+      { "amount": "2 cloves", "name": "garlic", "purchased": true },
+      { "amount": "200 g", "name": "parmesan cheese", "purchased": false }
+    ],
+    "archived": false
+  }
+]

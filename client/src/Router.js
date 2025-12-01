@@ -3,30 +3,41 @@ import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 
 import { UserContext } from "./UserProvider.js";
 
-import Layout from "./layout.jsx";
+import Layout from "./Layout.js";
 import Login from "./Login.js";
 import ShoppingListProvider from "./ShoppingListProvider.js";
+import ShoppingListsProvider from "./ShoppingListsProvider.js";
+import ShoppingLists from "./ShoppingLists.js";
 import ShoppingListDetail from "./ShoppingListDetail.js";
 
 function Router() {
-  const { loggedInUser } = useContext(UserContext);
+  const { authUser } = useContext(UserContext);
   const navigate = useNavigate();
   const { pathname } = useLocation();
   // const [searchParams, setSearchParams] = useSearchParams();
 
+  /* eslint-disable */
   useEffect(() => {
-    if (!loggedInUser && pathname !== "/login") {
+    if (!authUser?.id && pathname !== "/login") {
       navigate(`/login?origin=${pathname}`);
-    } else if (loggedInUser && pathname === "/login") {
-      navigate(`/shoppingListDetail`);
+    } else if (authUser?.id && pathname === "/login") {
+      navigate(`/`);
     }
-  }, [loggedInUser]);
+  }, [authUser?.id]);
+  /* eslint-enable */
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>list of shopping lists</div>} />
+          <Route
+            index
+            element={
+              <ShoppingListsProvider>
+                <ShoppingLists />
+              </ShoppingListsProvider>
+            }
+          />
           <Route
             path="/login"
             element={
